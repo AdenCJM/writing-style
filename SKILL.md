@@ -1,18 +1,14 @@
 ---
 name: writing-style
 description: >-
-  Mandatory style guide for all written English output. Enforces Australian English spelling,
-  bans common AI-tell words and phrases, and ensures a direct, natural, human tone. Use this
-  skill every time you write, edit, rewrite, or review prose of any kind, including: emails,
-  Slack messages, blog posts, reports, articles, presentations, one-pagers, job descriptions,
-  speaker notes, customer replies, farewell messages, internal announcements, creative writing,
-  or any other text a human will read. Also use when cleaning up AI-generated text (e.g. from
-  ChatGPT, Gemini, or another LLM) to remove robotic language. If someone asks you to "make
-  this sound more natural", "rewrite this", "draft a message", "write an email", "clean this
-  up", or "fix the tone", this skill applies. Even short, informal messages like a two-line
-  Slack ping must follow these rules. The only exceptions are code, variable names, and direct
-  quotes. When in doubt, use this skill. It is better to over-trigger than to miss a case
-  where the output sounds like AI wrote it.
+  Style guide for written English output. Use this skill when writing, editing,
+  rewriting, or reviewing prose such as emails, Slack messages, blog posts,
+  reports, presentations, one-pagers, job descriptions, customer replies,
+  announcements, or creative writing. It enforces Australian English spelling,
+  removes common AI-tell words and phrases, bans em dashes, and keeps the tone
+  direct, natural, and human. Also use it to clean up AI-generated text or when
+  asked to make writing sound more natural. Do not apply it to code, variable
+  names, or direct quotes.
 ---
 
 # Writing Style Rules
