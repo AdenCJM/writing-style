@@ -15,11 +15,19 @@ Works on emails, Slack messages, blog posts, reports, presentations, and anythin
 ## Install
 
 ```bash
-# Clone into your Claude Code skills directory
-git clone https://github.com/AdenCJM/writing-style.git ~/.claude/skills/writing-style
+npx skills add AdenCJM/writing-style
 ```
 
 That's it. Claude Code picks it up automatically.
+
+### Hackable install
+
+If you want to edit the skill locally, clone it instead:
+
+```bash
+git clone https://github.com/AdenCJM/writing-style.git ~/.agents/skills/writing-style
+ln -s ~/.agents/skills/writing-style ~/.claude/skills/writing-style
+```
 
 ## Example
 
@@ -33,7 +41,7 @@ That's it. Claude Code picks it up automatically.
 
 ## Customising
 
-The skill is a single `SKILL.md` file. Fork it and edit to suit your preferences:
+The skill is a single `writing-style/SKILL.md` file. Fork it and edit to suit your preferences:
 
 - Swap Australian English for British English (minor changes)
 - Add or remove banned words
