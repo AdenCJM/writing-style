@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Style"
+  short_description: "Help with writing style tasks"
+  default_prompt: "Use $writing-style to rewrite this so it reads naturally in Australian English."
