@@ -1,0 +1,78 @@
+name: Improve skill
+
+# Evaluate the skill, then ask a model to propose the smallest useful change
+# (new banned words, tighter rules) backed by the eval evidence. The proposal is
+# only kept if it still passes validation. If SKILL.md changed, a pull request is
+# opened for human review - this workflow never commits to the default branch.
+#
+# Manual only. Needs the ANTHROPIC_API_KEY secret; if it's missing the scripts
+# skip and no PR is opened.
+
+on:
+  workflow_dispatch:
+    inputs:
+      improve_model:
+        description: "Model for the improve step"
+        default: "claude-opus-4-8"
+      gen_model:
+        description: "Model used to generate eval completions"
+        default: "claude-sonnet-4-6"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: improve-skill
+  cancel-in-progress: false
+
+jobs:
+  improve:
+    name: Evaluate and propose an improvement
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r evals/requirements.txt
+
+      - name: Run evaluation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEN_MODEL: ${{ inputs.gen_model }}
+        run: python evals/run_eval.py --out evals/reports/latest
+
+      - name: Propose an improvement
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IMPROVE_MODEL: ${{ inputs.improve_model }}
+        run: python evals/improve.py --report evals/reports/latest.json --notes evals/reports/improvement-notes.md
+
+      - name: Open a pull request if the skill changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- SKILL.md; then
+            echo "No change to SKILL.md - nothing to propose."
+            exit 0
+          fi
+          # Re-run the self-test against the modified skill as a final gate.
+          python evals/check.py --selftest
+
+          branch="skill-improve-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add SKILL.md
+          git commit -m "Eval-driven writing-style skill improvement"
+          git push -u origin "$branch"
+          body_args=(--title "Writing-style skill improvement (eval-driven)" --base "${{ github.ref_name }}" --head "$branch")
+          if [ -f evals/reports/improvement-notes.md ]; then
+            body_args+=(--body-file evals/reports/improvement-notes.md)
+          else
+            body_args+=(--body "Automated improvement proposed from the eval. See workflow logs.")
+          fi
+          gh pr create "${body_args[@]}"

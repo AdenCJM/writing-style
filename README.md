@@ -47,9 +47,25 @@ Tested across 3 prompt types (email, blog post, AI text rewrite) with and withou
 | Metric | With Skill | Baseline |
 |--------|-----------|----------|
 | Pass rate | 95.5% | 63.7% |
-| Token overhead | +9.3% | — |
+| Token overhead | +9.3% | n/a |
 
 The skill eliminates em dashes and AI-tell words reliably, with minimal overhead.
+
+### Reproduce and improve
+
+The `evals/` directory has the harness behind these numbers. It parses the rules
+out of `SKILL.md` (so it always tests the current skill), generates each prompt
+with and without the skill, and scores both:
+
+```bash
+python evals/check.py --selftest        # no API key needed
+python evals/run_eval.py                # needs ANTHROPIC_API_KEY
+```
+
+Two GitHub Actions workflows wire this up: `eval.yml` runs the deterministic
+checks on every push and a full eval weekly, and `improve.yml` proposes
+validated, evidence-driven edits to the skill as a pull request. See
+[`evals/README.md`](evals/README.md).
 
 ## Licence
 

@@ -1,0 +1,1 @@
+Quick heads-up: we're switching from Jira to Linear next month. It's faster, simpler, and better suited to how we actually work. I'll send setup details next week, but there's nothing you need to do yet. Shout if you've got questions.

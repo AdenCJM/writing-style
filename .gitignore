@@ -5,3 +5,6 @@ feedback.json
 __pycache__/
 .DS_Store
 .tmp/
+
+# Generated evaluation reports
+evals/reports/

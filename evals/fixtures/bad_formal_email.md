@@ -1,0 +1,1 @@
+I wanted to take a moment to inform you that we will be transitioning our project management platform. It is our belief that this change will significantly enhance our team's productivity and streamline our workflows. Furthermore, we are confident this is not just an upgrade, it is a transformation.

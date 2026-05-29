@@ -1,0 +1,60 @@
+name: Evaluate skill
+
+# Two layers of evaluation:
+#   1. `check` - deterministic, no secrets, runs on every push/PR. Parses the
+#      rules out of SKILL.md and proves the checker catches the right things and
+#      that the skill's own examples and fixtures stay consistent.
+#   2. `live-eval` - generates real completions with and without the skill and
+#      scores them. Needs ANTHROPIC_API_KEY, so it only runs on manual dispatch
+#      and on a weekly schedule. It self-skips cleanly if the secret is absent.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 * * 1" # Mondays, 09:17 UTC
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eval-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Deterministic checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Self-test the checker, fixtures, and skill consistency
+        run: python evals/check.py --selftest
+
+  live-eval:
+    name: Live eval (with vs without skill)
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r evals/requirements.txt
+      - name: Run evaluation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEN_MODEL: ${{ vars.GEN_MODEL || 'claude-sonnet-4-6' }}
+        run: python evals/run_eval.py --out evals/reports/latest
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-report
+          path: evals/reports/
+          if-no-files-found: ignore

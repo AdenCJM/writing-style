@@ -1,0 +1,55 @@
+{
+  "description": "Prompts used to evaluate the writing-style skill. Each is generated twice (with the skill as a system prompt, and as a baseline with no system prompt), then scored by check.py.",
+  "cases": [
+    {
+      "id": "email-platform-switch",
+      "type": "email",
+      "prompt": "Write a short internal email announcing that the team is switching from Jira to Linear next month."
+    },
+    {
+      "id": "blog-adopt-technology",
+      "type": "blog",
+      "prompt": "Write two paragraphs of a blog post about why businesses need to adopt new technology to stay competitive."
+    },
+    {
+      "id": "rewrite-ai-text",
+      "type": "rewrite",
+      "prompt": "Rewrite this so it sounds like a real human wrote it: 'In today's rapidly evolving digital landscape, organisations must leverage cutting-edge technologies to seamlessly navigate the complexities of modern business. It is important to note that a holistic approach can yield extraordinary results.'"
+    },
+    {
+      "id": "slack-review-request",
+      "type": "slack",
+      "prompt": "Write a two-line Slack message asking a colleague if they can review your pull request before end of day."
+    },
+    {
+      "id": "farewell-teammate",
+      "type": "farewell",
+      "prompt": "Write a short farewell message to a teammate who is leaving the company after four years."
+    },
+    {
+      "id": "quarterly-summary",
+      "type": "report",
+      "prompt": "Write a three-sentence executive summary of a quarterly sales report that shows 12% revenue growth and a new record month in March."
+    },
+    {
+      "id": "job-description",
+      "type": "job-description",
+      "prompt": "Write the opening paragraph of a job description for a senior backend engineer at a fintech startup."
+    },
+    {
+      "id": "customer-reply-bug",
+      "type": "customer-reply",
+      "prompt": "Write a reply to a customer who reported that the export feature has been failing for two days. Acknowledge the issue, explain it's fixed, and apologise."
+    },
+    {
+      "id": "product-announcement",
+      "type": "announcement",
+      "prompt": "Write a short internal announcement that the new analytics dashboard is live and where people can find it."
+    },
+    {
+      "id": "speaker-notes",
+      "type": "speaker-notes",
+      "prompt": "Write speaker notes for a one-minute opening to a conference talk about how a small team shipped a feature in a week."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+I wanted to flag something about our color scheme — it doesn't match the brand guidelines. We should prioritize fixing this and standardize the palette across the organization. The team's behavior around design consistency needs work, and we must recognize that defense of the status quo isn't helping.

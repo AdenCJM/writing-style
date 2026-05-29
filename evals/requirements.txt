@@ -1,0 +1,3 @@
+# Only needed for the live eval (run_eval.py) and improve (improve.py).
+# The deterministic checker (check.py) and its self-test use the standard library only.
+anthropic>=0.40,<1.0
