@@ -56,7 +56,7 @@ The skill is a single `SKILL.md` file. Fork it and edit to suit:
 
 The eval set is committed at [eval/PROMPTS.md](eval/PROMPTS.md): writing tasks across casual and formal registers plus a marking checklist. Run the tasks with and without the skill and mark both sets. Scored runs are committed under [eval/](eval/) so the claims here are checkable.
 
-Latest run ([eval/results-2026-06.md](eval/results-2026-06.md)): every piece passed every applicable checklist row with the skill loaded. The no-skill baseline failed rows across the board: em dashes, decorative emoji, "I hope you're doing well!" openers, bold lead-in bullets, engagement bait and a hashtag block.
+Latest run ([eval/results-2026-06b.md](eval/results-2026-06b.md)): every piece passed every applicable checklist row with the skill loaded, and the no-skill baseline failed four of seven tasks. The unguided model has cleaned up since the first run (no emoji or hashtag blocks this time); what still separates the two is invented numbers, triad stacking, stray em dashes and banned words. The earlier run is kept at [eval/results-2026-06.md](eval/results-2026-06.md).
 
 ## Licence
 

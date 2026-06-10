@@ -2,7 +2,7 @@
 
 Writing tasks covering the formats the skill is used for, plus a marking checklist. Run the tasks twice: once with SKILL.md loaded ("use the writing-style skill for all tasks") and once without, then mark both sets against the checklist.
 
-Register key: tasks 1, 2, 3 and 5 are casual or semi-formal. Tasks 4 and 6 are formal.
+Register key: tasks 1, 2, 3, 5 and 7 are casual or semi-formal. Tasks 4 and 6 are formal.
 
 ## Tasks
 
@@ -19,6 +19,10 @@ Register key: tasks 1, 2, 3 and 5 are casual or semi-formal. Tasks 4 and 6 are f
 
 6. **Report section** (formal). The "Current state" section (about 150 words) of an external quarterly partner report on support operations. Ticket volume rose from 1,800 to 2,400 this quarter; median first-response time fell from 9 hours to 4.
 
+7. **Recommendation memo** (semi-formal). An internal memo to the exec team recommending one of two shortlisted ticket-triage vendors after a trial: Parallel ($2,300 a month, 94% routing accuracy in the trial, two-week integration) or Slate ($900 a month, 81% accuracy, one-day setup on the existing helpdesk). Pick one and commit to it. At least five paragraphs, 200–250 words.
+
+Marker's note, not part of any task prompt: task 7 targets two specific failure modes, balancing the recommendation into mush (token counterpoint) and metronome paragraphs (pacing). Don't paste this note when running the tasks.
+
 ## Marking checklist
 
 Score each piece pass/fail per row (rows scoped to specific tasks only apply there). A piece passes overall only if every applicable row passes.
@@ -27,7 +31,7 @@ Score each piece pass/fail per row (rows scoped to specific tasks only apply the
 |---|---|
 | No banned words or phrases, including nearest-synonym swaps | leverage, "capitalise on", seamless, "frictionless", delve |
 | No vague intensifiers; use the numbers supplied by the task | "significantly faster" in task 4 or 6 where real numbers were given |
-| No invented numbers | a statistic that appears in no task prompt |
+| No invented numbers (arithmetic derived from supplied figures passes) | "estimated at two to three weeks" with no basis in the task; a 33% rise derived from supplied 1,800→2,400 figures is fine |
 | No em dashes outside quoted input text | — anywhere in fresh prose |
 | No Oxford comma, except where genuinely needed to resolve ambiguity | "a, b, and c" with no ambiguity |
 | Australian spelling | -ize, -yze, -ense, -or for -our, -er for -re |
@@ -39,12 +43,12 @@ Score each piece pass/fail per row (rows scoped to specific tasks only apply the
 | No AI email furniture | "I hope this finds you well", "feel free to reach out" |
 | No engagement bait or hashtag blocks | "What do you think? 👇 #AI" |
 | No decorative emoji or bold lead-in decoration (numbered bold headers for a real list of things are fine) | 🚀 anywhere, "**Speed.** We ship daily." |
-| Exclamation marks: max one in tasks 1, 2, 3 and 5; zero in tasks 4 and 6 | "!" twice in the Slack post, any "!" in the report |
+| Exclamation marks: max one in tasks 1, 2, 3, 5 and 7; zero in tasks 4 and 6 | "!" twice in the Slack post, any "!" in the report |
 | No neat-bow ending | "Exciting times ahead." as the closer |
 | No over-structuring (tasks 1 and 2 should be paragraphs, not header stacks) | a Slack post with three headers and a bullet list |
 | No hedging stacks | "could potentially", "may possibly" |
-| No token counterpoint: opinions aren't balanced with a reflexive concession | "This is the right call. That said, there are trade-offs to consider." |
-| Contractions in casual and semi-formal pieces (tasks 1, 2, 3 and 5) | "it is" where "it's" reads naturally |
+| No token counterpoint: opinions aren't balanced with a reflexive concession; a caveat the reader needs to weigh or act on passes | "This is the right call. That said, there are trade-offs to consider." (a capacity warning with a consequence attached is not a fail) |
+| Contractions in casual and semi-formal pieces (tasks 1, 2, 3, 5 and 7) | "it is" where "it's" reads naturally |
 | Email voice (task 2): plain subject line, "Hey Sarah," or "Hi Sarah," greeting, "Cheers" or "Thanks" sign-off | subject "Touching Base Regarding Our QBR", "Dear Sarah", "Best regards" |
 | No colloquialisms in formal pieces (tasks 4 and 6) | "keen", "heads-up" or "mate" in the report |
-| Varied sentence rhythm and paragraph size; paragraphs don't all end on a punchy fragment | three consecutive same-shape sentences, every paragraph exactly two sentences, every paragraph closing "That's it." style |
+| Varied sentence rhythm; in pieces of three or more paragraphs, paragraph sizes vary too (one-sentence paragraphs and numbered list items exempt); paragraphs don't all end on a punchy fragment | three consecutive same-shape sentences, every paragraph exactly two sentences, every paragraph closing "That's it." style |
