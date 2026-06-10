@@ -5,3 +5,4 @@ feedback.json
 __pycache__/
 .DS_Store
 .tmp/
+.context/
