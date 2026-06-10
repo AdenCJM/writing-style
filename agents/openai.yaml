@@ -1,4 +1,4 @@
 interface:
   display_name: "Writing Style"
-  short_description: "Help with writing style tasks"
-  default_prompt: "Use $writing-style to rewrite this so it reads naturally in Australian English."
+  short_description: "Australian English style guide that strips AI-tell words and structures and writes in a direct, human voice"
+  default_prompt: "Use $writing-style to rewrite this so it reads like a sharp, direct human wrote it, in Australian English."
