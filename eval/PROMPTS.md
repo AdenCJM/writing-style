@@ -43,7 +43,8 @@ Score each piece pass/fail per row (rows scoped to specific tasks only apply the
 | No neat-bow ending | "Exciting times ahead." as the closer |
 | No over-structuring (tasks 1 and 2 should be paragraphs, not header stacks) | a Slack post with three headers and a bullet list |
 | No hedging stacks | "could potentially", "may possibly" |
+| No token counterpoint: opinions aren't balanced with a reflexive concession | "This is the right call. That said, there are trade-offs to consider." |
 | Contractions in casual and semi-formal pieces (tasks 1, 2, 3 and 5) | "it is" where "it's" reads naturally |
 | Email voice (task 2): plain subject line, "Hey Sarah," or "Hi Sarah," greeting, "Cheers" or "Thanks" sign-off | subject "Touching Base Regarding Our QBR", "Dear Sarah", "Best regards" |
 | No colloquialisms in formal pieces (tasks 4 and 6) | "keen", "heads-up" or "mate" in the report |
-| Varied sentence rhythm; paragraphs don't all end on a punchy fragment | three consecutive same-shape sentences, every paragraph closing "That's it." style |
+| Varied sentence rhythm and paragraph size; paragraphs don't all end on a punchy fragment | three consecutive same-shape sentences, every paragraph exactly two sentences, every paragraph closing "That's it." style |

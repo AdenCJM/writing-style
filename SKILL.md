@@ -83,6 +83,7 @@ landscape (metaphorical), ecosystem (outside biology), realm, paradigm, journey 
 - **Over-structuring.** Don't reach for headers, bullets and numbered steps when a paragraph would do.
 - **Restating the prompt.** Never open with "Great question!" or a paraphrase of what was asked. Just answer.
 - **Hedging stacks**: "could potentially", "may possibly", "it could be argued". Commit or cut.
+- **The token counterpoint.** Don't balance every opinion with "that said", "on the other hand" or "there are trade-offs to consider". Commit to the position. Include the counterpoint only if it changes what the reader should do.
 
 ## Voice
 
@@ -106,6 +107,7 @@ Write like a busy, friendly operator:
 - Shorter sentences by default. A four-word sentence is fine.
 - Contractions are normal: "don't", "won't", "it's", "that's". Uncontracted forms only in highly formal contexts.
 - Vary sentence shape and length. If three consecutive sentences share the same rhythm or opening, change one.
+- Don't make every paragraph the same size. In pieces with three or more paragraphs, vary the sentence count where it feels natural: one sentence is fine, three is fine, all two-sentence paragraphs is usually too neat.
 - Get to the point. No throat-clearing, no preamble padding.
 - If a sentence still makes sense after you strip a word out, strip it out.
 - Don't end every paragraph on a short punchy zinger. Done each time, it's a tell of its own. Some paragraphs should just stop.
@@ -131,7 +133,7 @@ Before delivering any written output, scan it once for:
 1. Banned words, phrases or constructions from the lists above
 2. Em dashes outside direct quotes, Oxford commas and stray exclamation marks
 3. American spellings (-ize, -yze, -ense for -ence, -or for -our, -er for -re)
-4. Two or more triads, or three consecutive sentences with the same shape
+4. Two or more triads, three consecutive sentences with the same shape, or three same-length paragraphs in a row
 5. AI email furniture: "I hope this finds you well" openers, "feel free to reach out" closers, the neat-bow ending
 6. Uncontracted "it is", "there is", "that is" in casual contexts
 
