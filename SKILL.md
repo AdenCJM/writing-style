@@ -1,12 +1,13 @@
 ---
 name: writing-style
 description: >-
-  Style guide for written English output. Enforces Australian English spelling,
-  bans AI-tell words, phrases and sentence structures, and applies a direct,
-  natural, human voice. ONLY use this skill when the user explicitly requests it
+  Style guide for written English output. Enforces Australian English spelling
+  and a direct, natural, human voice, and bans AI-tell words, phrases and
+  sentence structures. ONLY use this skill when the user explicitly requests it
   (e.g. "/writing-style", "use the writing-style skill", "apply your writing
-  rules", "write this in my style"). Do NOT trigger it automatically for general
-  queries, code generation or while running other skills.
+  rules", "write this in my style"). Do NOT fire it automatically for general
+  queries or code generation. An explicit request wins: if the user asks for
+  this skill while another skill is running, apply it to that task's prose.
 ---
 
 # Writing style rules
@@ -19,7 +20,7 @@ Apply these rules to the prose you've been asked to produce or edit: emails, Sla
 
 Leave these untouched:
 - Code, variable names and inline code snippets
-- Direct quotes from other people (reproduce verbatim)
+- Direct quotes from other people (reproduce verbatim, unless the quote is itself the text you've been asked to rewrite)
 - Proper nouns, brand names and product names that use American spelling
 
 ## Language
@@ -41,6 +42,7 @@ Headings in sentence case, never Title Case. Dates as 10 June 2026.
 ## Punctuation
 
 - Never use em dashes (—). Use commas, full stops, colons, parentheses or rewrite the sentence. Don't swap every em dash for a semicolon either; more than a couple of semicolons in a piece means some sentences need rewriting.
+- Colon-led fragments ("The fix: rewrite it") are another pressure valve; one per piece, maximum.
 - No Oxford comma: "teams, processes and systems", not "teams, processes, and systems". Use one only when the sentence is ambiguous without it.
 - En dashes (–) are fine for ranges: 3–4 weeks.
 - One exclamation mark per piece, maximum. None in formal documents.
@@ -65,11 +67,13 @@ landscape (metaphorical), ecosystem (outside biology), realm, paradigm, journey 
 - "Feel free to reach out", "Don't hesitate to contact me", "Apologies for any inconvenience"
 - "Say goodbye to X", "Look no further"
 
-**Replace vague intensity with specifics.** Where "significantly" or "substantially" tempts you, give the number: "40% faster", not "significantly faster". No number? Make the claim plainly: "faster".
+**Replace vague intensity with specifics.** Where "significantly" or "substantially" tempts you, give the number: "40% faster", not "significantly faster". Only use numbers that come from the source material or the user; never invent one. No real number? Make the claim plainly: "faster".
+
+**Don't swap a banned word for its nearest synonym.** "Capitalise on" for "leverage" or "frictionless" for "seamless" fails the same test. If a sentence seems to need a banned word, the sentence is the problem; rewrite it in plainer terms.
 
 ## Banned constructions
 
-- **The rule of three.** AI defaults to triads ("faster, simpler and cheaper"). One triad in a piece might be fine. Two is a pattern. Vary list lengths: two items, four items, or restructure the sentence.
+- **The rule of three.** AI defaults to triads ("faster, simpler and cheaper"). One triad in a piece might be fine. Two is a pattern. Vary list lengths: two items, four items or a restructured sentence. This applies to rhetorical lists in delivered prose, not to reference data like the spelling examples above.
 - **"This is not X, it's Y" and every variant**: "It's less about X and more about Y", "X isn't a limitation, it's a feature". If a contrast lands on this template, rewrite it.
 - **Rhetorical question + snappy answer**: "The result? More sales." "The catch? There isn't one."
 - **"Not only X but also Y"** and **"Whether you're a X or a Y"**.
@@ -82,14 +86,17 @@ landscape (metaphorical), ecosystem (outside biology), realm, paradigm, journey 
 
 ## Voice
 
+This section is tuned to the skill's author. If you've installed this skill, swap the name and habits for your own (see the README's customising notes).
+
 Write like a busy, friendly operator:
 
 - **Default to short.** If one sentence does the job, send one sentence. "Count me in." and "No thanks." are complete messages.
-- **Greetings**: "Hey [first name]," for almost everyone, "Hi [name]," when more formal, "Hey team," for groups. Sign off "Cheers, Aden" (or "Thanks," when asking for something).
+- **Greetings and sign-offs are for emails.** "Hey [first name]," for almost everyone, "Hi [name]," when more formal, "Hey team," for groups. Sign off "Cheers, [your first name]" (or "Thanks," when asking for something), always with the actual sender's name. Slack messages, posts and documents get neither.
 - **Short paragraphs**, 1–3 sentences. When sending several items, number them with a bold one-line header each.
 - **State opinions without hedging** and back them with a concrete example or a number. "Not glamorous, but it works."
 - **Ask questions directly**, often as their own line: "Who's owning this?"
 - **Warmth through small specifics**, not gush: a brief pointed compliment ("Solid video."), a personal aside, one exclamation mark at most.
+- **Care beats bluntness with customers.** In support replies and apologies, be specific and human ("Sorry, we broke this") and give a plain contact path. Short is good; curt is not.
 - **Australian colloquialisms** are fine with peers (mate, keen, heads-up, "send through", "across it") and off in formal writing.
 - **Plain subject lines** that say what the email is: "Receipt request", "Bits and pieces from this morning".
 - **Don't over-polish.** Mild informality beats corporate sheen. When editing someone's draft, keep their asides and quirks unless asked to remove them.
@@ -101,6 +108,7 @@ Write like a busy, friendly operator:
 - Vary sentence shape and length. If three consecutive sentences share the same rhythm or opening, change one.
 - Get to the point. No throat-clearing, no preamble padding.
 - If a sentence still makes sense after you strip a word out, strip it out.
+- Don't end every paragraph on a short punchy zinger. Done each time, it's a tell of its own. Some paragraphs should just stop.
 - Read it back. If it sounds like a press release or a LinkedIn post, rewrite it.
 
 ## Examples
@@ -121,8 +129,8 @@ Write like a busy, friendly operator:
 
 Before delivering any written output, scan it once for:
 1. Banned words, phrases or constructions from the lists above
-2. Em dashes, Oxford commas and stray exclamation marks
-3. American spellings (-ize, -yze, -or for -our, -er for -re)
+2. Em dashes outside direct quotes, Oxford commas and stray exclamation marks
+3. American spellings (-ize, -yze, -ense for -ence, -or for -our, -er for -re)
 4. Two or more triads, or three consecutive sentences with the same shape
 5. AI email furniture: "I hope this finds you well" openers, "feel free to reach out" closers, the neat-bow ending
 6. Uncontracted "it is", "there is", "that is" in casual contexts

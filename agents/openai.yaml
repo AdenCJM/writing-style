@@ -1,3 +1,4 @@
+# Keep short_description aligned with the SKILL.md frontmatter description (source of truth).
 interface:
   display_name: "Writing Style"
   short_description: "Australian English style guide that strips AI-tell words and structures and writes in a direct, human voice"
