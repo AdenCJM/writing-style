@@ -2,7 +2,7 @@
 
 Writing tasks covering the formats the skill is used for, plus a marking checklist. Run the tasks twice: once with SKILL.md loaded ("use the writing-style skill for all tasks") and once without, then mark both sets against the checklist.
 
-Register key: tasks 1, 2, 3, 5 and 7 are casual or semi-formal. Tasks 4 and 6 are formal.
+Register key: tasks 1, 2, 3, 5, 7 and 8 are casual or semi-formal. Tasks 4 and 6 are formal.
 
 ## Tasks
 
@@ -21,7 +21,9 @@ Register key: tasks 1, 2, 3, 5 and 7 are casual or semi-formal. Tasks 4 and 6 ar
 
 7. **Recommendation memo** (semi-formal). An internal memo to the exec team recommending one of two shortlisted ticket-triage vendors after a trial: Parallel ($2,300 a month, 94% routing accuracy in the trial, two-week integration) or Slate ($900 a month, 81% accuracy, one-day setup on the existing helpdesk). Pick one and commit to it. At least five paragraphs, 200–250 words.
 
-Marker's note, not part of any task prompt: task 7 targets two specific failure modes, balancing the recommendation into mush (token counterpoint) and metronome paragraphs (pacing). Don't paste this note when running the tasks.
+8. **Analysis writeup** (semi-formal). A founder asked you to pull apart whether their toy-rental startup should go narrow (one city, premium service) or wide (national, self-serve marketplace) before raising. The narrow option: about 400 paying families in one city, 70% gross margin, break-even in month 8. The wide option: needs about 5,000 users to cover logistics, burns the raise faster, no clear moat. Write up the analysis and the call you'd make, for the founder to read. End on what they should do next. 180–220 words.
+
+Marker's note, not part of any task prompt: task 7 targets two specific failure modes, balancing the recommendation into mush (token counterpoint) and metronome paragraphs (pacing). Task 8 targets the assistant-commentary frame: an analysis the model was asked to run and report back tempts effort narration ("the analysis you asked for"), a hand-over opener and an offer-to-continue closer. Don't paste this note when running the tasks.
 
 ## Marking checklist
 
@@ -43,12 +45,13 @@ Score each piece pass/fail per row (rows scoped to specific tasks only apply the
 | No AI email furniture | "I hope this finds you well", "feel free to reach out" |
 | No engagement bait or hashtag blocks | "What do you think? 👇 #AI" |
 | No decorative emoji or bold lead-in decoration (numbered bold headers for a real list of things are fine) | 🚀 anywhere, "**Speed.** We ship daily." |
-| Exclamation marks: max one in tasks 1, 2, 3, 5 and 7; zero in tasks 4 and 6 | "!" twice in the Slack post, any "!" in the report |
+| Exclamation marks: max one in tasks 1, 2, 3, 5, 7 and 8; zero in tasks 4 and 6 | "!" twice in the Slack post, any "!" in the report |
 | No neat-bow ending | "Exciting times ahead." as the closer |
 | No over-structuring (tasks 1 and 2 should be paragraphs, not header stacks) | a Slack post with three headers and a bullet list |
 | No hedging stacks | "could potentially", "may possibly" |
 | No token counterpoint: opinions aren't balanced with a reflexive concession; a caveat the reader needs to weigh or act on passes | "This is the right call. That said, there are trade-offs to consider." (a capacity warning with a consequence attached is not a fail) |
-| Contractions in casual and semi-formal pieces (tasks 1, 2, 3, 5 and 7) | "it is" where "it's" reads naturally |
+| No assistant-commentary frame (esp. task 8): no effort or process narration, no hand-over opener in any grammatical person, no meta-closer or offer to continue, no chummy reader-flattery; substantive first-person opinions and plain statements of what was done pass | "Here's the analysis I promised", "here's where I land", "below is the writeup", "that's my read", "want me to go deeper?", "you're well placed to pull this off" (a plain "My recommendation is X because..." or "We've finished the trial" is not a fail) |
+| Contractions in casual and semi-formal pieces (tasks 1, 2, 3, 5, 7 and 8) | "it is" where "it's" reads naturally |
 | Email voice (task 2): plain subject line, "Hey Sarah," or "Hi Sarah," greeting, "Cheers" or "Thanks" sign-off | subject "Touching Base Regarding Our QBR", "Dear Sarah", "Best regards" |
 | No colloquialisms in formal pieces (tasks 4 and 6) | "keen", "heads-up" or "mate" in the report |
 | Varied sentence rhythm; in pieces of three or more paragraphs, paragraph sizes vary too (one-sentence paragraphs and numbered list items exempt); paragraphs don't all end on a punchy fragment | three consecutive same-shape sentences, every paragraph exactly two sentences, every paragraph closing "That's it." style |

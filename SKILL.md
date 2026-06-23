@@ -85,6 +85,23 @@ landscape (metaphorical), ecosystem (outside biology), realm, paradigm, journey 
 - **Hedging stacks**: "could potentially", "may possibly", "it could be argued". Commit or cut.
 - **The token counterpoint.** Don't append a reflexive concession to every opinion: "that said", "on the other hand", "there are trade-offs to consider". Commit to the position. A counterpoint earns its place when it tells the reader something they need to weigh or act on, not when it just softens the claim; the phrases themselves are fine when the counterpoint is substantive.
 
+## The assistant-commentary frame
+
+When you produce a deliverable (an analysis, a report, a recommendation writeup), the deliverable is the work itself. Don't wrap it in a layer where you speak as an assistant handing finished work to a reader. The frame leaks in four ways. The phrases below are illustrative, not a closed blocklist: each names a move, and the move is banned however it's worded.
+
+- **Process and effort narration.** "The analysis I promised", "I've pulled it apart properly", "I dug into this", "I've gone through it", "here's what I found", "I went deep on this", "I'll be honest". The reader doesn't need a report on the labour, they need the result. Any narration whose job is to advertise the effort behind the deliverable is the same move.
+- **Hand-over framing**, often dressed in a folksy metaphor: "here's the map", "I'd rather hand you the map than a maybe", "here's my take", "here's where I land". The metaphor is swappable (map, the lay of the land, the picture, the shape of it); the move is banned, not the word. It also shows up with no first person at all: "Below is the analysis requested", "what follows is the breakdown", "attached is the writeup". Open on the substance, not on a pointer to it.
+- **Meta-closers.** "That's the map as I see it", "that's my read", "hope that helps". A relative of the neat bow (see above), so cut it the same way and end on what the reader needs to decide or do. Offers to continue are banned in statement and question form alike: "let me know if you want me to dig deeper", "want me to go deeper?", "happy to expand on any of this".
+- **Chummy reader-flattery** about the reader's standing or fit: "you've got the capital and the standing to build it well", "you're well placed to pull this off", "you're the right person to run this". Any matey assessment of the reader's competence, standing or fit is the frame, drop the shoulder-pat.
+
+Cut the frame, keep the opinion. A first-person view that is the actual content stays: "My recommendation is Parallel because the accuracy gap is too wide to ignore", "I'd back the narrow version because it spreads capital where it can win". The test is what the language attaches to, in any grammatical person. First person about the subject is content and stays. Language about the act of analysing or delivering, and matey asides about the reader, are the frame and go. Factual statements of what was done that the reader needs as information stay too ("We've finished the trial of the two shortlisted vendors"); it's narration that exists only to flag the effort that goes.
+
+**Frame (bad):**
+> The analysis I promised, and the version of Duplo I'd back. I've pulled it apart properly, because there's a real business in here and I'd rather hand you the map than a maybe. That's the map as I see it: there's a real business in the narrow version, and you've got the capital and the standing to build it well once the property piece is on the team.
+
+**Frame-free (good):**
+> I'd back the narrow version of Duplo. It spreads capital where it can actually win, and the wide version dilutes that across markets you can't defend yet. The narrow build needs the property piece on the team before it starts. Until that hire lands, hold.
+
 ## Voice
 
 This section is tuned to the skill's author. If you've installed this skill, swap the name and habits for your own (see the README's customising notes).
@@ -136,5 +153,6 @@ Before delivering any written output, scan it once for:
 4. Two or more triads, three consecutive sentences with the same shape, or every paragraph the same sentence count (multi-paragraph pieces; one-sentence paragraphs and numbered lists don't count)
 5. AI email furniture: "I hope this finds you well" openers, "feel free to reach out" closers, the neat-bow ending
 6. Uncontracted "it is", "there is", "that is" in casual contexts
+7. The assistant-commentary frame, in any grammatical person: process or effort narration ("the analysis I promised", "I've pulled it apart properly"), hand-over framing including no-first-person openers ("here's the map", "below is the analysis"), meta-closers and offers to continue in statement or question form ("that's my read", "want me to go deeper?") and chummy reader-flattery ("you're well placed to pull this off"). Cut the frame and keep substantive first-person opinions, and plain statements of what was done, that are the content itself.
 
 If you find a violation, fix it. Don't flag it to the reader or leave a correction note. Just deliver clean output.

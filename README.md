@@ -7,6 +7,7 @@ A Claude Code skill that enforces Australian English and a direct, human voice, 
 - **Australian English** in full: -ise, -our, -re, -yse, doubled L, practise/practice, sentence-case headings and no Oxford comma
 - **Bans the AI-tell word family**: leverage, seamless, delve, "I hope this email finds you well", "excited to announce" and the rest (the full list lives in SKILL.md), including nearest-synonym swaps
 - **Bans AI sentence structures**, which matter more than word choice: em dashes, the rule-of-three default, "not X, but Y" contrasts, rhetorical question-answer pairs, engagement bait, hashtag blocks and neat-bow endings
+- **Bans the assistant-commentary frame**: the conversational wrapper around a deliverable, including effort narration ("the analysis I promised"), hand-over openers in any person ("here's the map", "below is the analysis"), meta-closers and offers to continue ("that's my read", "want me to go deeper?") and reader-flattery, while keeping first-person opinions and plain statements of what was done that are the content
 - **Replaces vague intensity with specifics**: "40% faster", not "significantly faster"
 - **A voice section** that defines how the writing should sound: short messages, blunt opinions backed by numbers, plain subject lines and warmth through specifics rather than gush
 - **A self-check pass** before anything is delivered
@@ -56,7 +57,9 @@ The skill is a single `SKILL.md` file. Fork it and edit to suit:
 
 The eval set is committed at [eval/PROMPTS.md](eval/PROMPTS.md): writing tasks across casual and formal registers plus a marking checklist. Run the tasks with and without the skill and mark both sets. Scored runs are committed under [eval/](eval/) so the claims here are checkable.
 
-Latest run ([eval/results-2026-06b.md](eval/results-2026-06b.md)): every piece passed every applicable checklist row with the skill loaded, and the no-skill baseline failed four of seven tasks. The unguided model has cleaned up since the first run (no emoji or hashtag blocks this time); what still separates the two is invented numbers, triad stacking, stray em dashes and banned words. The earlier run is kept at [eval/results-2026-06.md](eval/results-2026-06.md).
+Latest full run ([eval/results-2026-06b.md](eval/results-2026-06b.md)): every piece passed every applicable checklist row with the skill loaded, and the no-skill baseline failed four of seven tasks. The unguided model has cleaned up since the first run (no emoji or hashtag blocks this time); what still separates the two is invented numbers, triad stacking, stray em dashes and banned words. The earlier run is kept at [eval/results-2026-06.md](eval/results-2026-06.md).
+
+A targeted run for the assistant-commentary-frame rule ([eval/results-2026-06c.md](eval/results-2026-06c.md)) added task 8, an analysis writeup that tempts the frame. The unguided baseline wrapped the analysis in effort narration and an offer-to-continue closer; with the skill loaded the same brief delivered the analysis straight and kept its first-person recommendation.
 
 ## Licence
 
