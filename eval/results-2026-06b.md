@@ -3,6 +3,7 @@
 - **Date:** 10 June 2026
 - **Model:** Claude (Fable 5) via Claude Code, fresh subagent context per run
 - **Skill version:** pacing-and-counterpoint-rules branch (adds the paragraph-pacing rule with its self-check item, the token-counterpoint ban with its checklist row, and amends the rhythm row)
+- **Commit:** `b8a61d5`
 - **Method:** two runs of the seven tasks in [PROMPTS.md](PROMPTS.md), one with SKILL.md loaded and one unguided baseline, both marked row by row against the updated checklist. Outputs for both arms are committed below. Task 7 was added during the pre-merge review to target the two new rules; both arms ran it the same day.
 - **Note:** the run used the branch's initial rule wording. A pre-merge review then aligned the wording of the pacing rule, self-check item 4 and the two checklist rows (same tests, one formulation); both arms were re-marked against the final wording and no verdict changed.
 

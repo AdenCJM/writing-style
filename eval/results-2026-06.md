@@ -3,6 +3,7 @@
 - **Date:** 10 June 2026
 - **Model:** Claude (Fable 5) via Claude Code, fresh subagent context per run
 - **Skill version:** style-overhaul branch (post-review fixes)
+- **Commit:** `6264aea`
 - **Method:** one run with SKILL.md loaded across all six tasks in [PROMPTS.md](PROMPTS.md), marked row by row against the checklist. Baseline comparison from an earlier no-skill run of tasks 1–5.
 
 ## With skill: verdicts

@@ -3,6 +3,7 @@
 - **Date:** 23 June 2026
 - **Model:** Claude (Opus 4.8) via Claude Code workflow subagents, fresh context per arm
 - **Skill version:** assistant-commentary-frame branch (adds the "The assistant-commentary frame" section, self-check item 7, the README bullet and eval task 8 with its checklist row)
+- **Commit:** `ee06cb1`
 - **Method:** a targeted single-task run of the new task 8 from [PROMPTS.md](PROMPTS.md), once with SKILL.md loaded and once unguided, each marked against the new assistant-commentary-frame row and its keep/ban boundary. The rule itself was drafted by three subagents, synthesised, then put through an adversarial conflict check (does it wrongly flag substantive first-person opinion?) and coverage check (does it catch the frame in passive and question forms?) before this run.
 
 ## Scope and limitations
