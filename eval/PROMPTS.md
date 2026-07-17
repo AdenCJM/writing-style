@@ -11,7 +11,7 @@ Writing tasks covering the formats the skill is used for, fidelity under rewriti
 5. Report row-level verdicts, not only an overall pass. Record ambiguous marking calls and all failures.
 6. Run both Claude Code and Codex before making cross-platform claims. Treat results from one harness as evidence for that harness only.
 
-Register key: tasks 1, 2, 3, 5, 7, 8 and 10 are casual or semi-formal. Tasks 4, 6, 9 and 11 are formal. Task 12 supplies its own house style.
+Register key: tasks 1, 2, 3, 5, 7, 8, 10, 13 and 14 are casual or semi-formal. Tasks 4, 6, 9, 11 and 16 are formal. Task 12 supplies its own house style. Task 15 is creative.
 
 ## Tasks
 
@@ -43,7 +43,16 @@ Register key: tasks 1, 2, 3, 5, 7, 8 and 10 are casual or semi-formal. Tasks 4, 
 
 12. **Explicit house-style override**. Write exactly three bullet points under the exact heading `AI Safety, Security, and Governance`. Use American English and an Oxford comma. The points must cover model testing, access controls and incident response. Do not add a greeting or closing.
 
-Marker's note, not part of any task prompt: task 7 targets token counterpoints and metronome paragraphs. Task 8 targets the assistant-commentary frame. Tasks 9–11 target fidelity, unsupported detail and required terminology. Task 12 confirms that explicit user requirements override the skill's defaults. Don't paste this note when running the tasks.
+13. **Light tighten and do no harm** (semi-formal). Tighten the following in light mode. Make no change that is not clearly necessary:
+    > "Thanks for sending this through. I've read it and agree with the recommendation. Let's discuss timing tomorrow."
+
+14. **Audit mode** (semi-formal). Audit the paragraph from task 5 using the writing-style skill. Group the most important issues by effect on the reader. Do not provide a rewritten paragraph.
+
+15. **Creative restraint**. Lightly edit this line from a personal essay while preserving its deliberate em dash, fragment and repetition: `I waited—and waited. No answer. Still no answer.` Correct only an objective error; if none exists, return it unchanged.
+
+16. **Reader outcome** (formal). Draft a short internal incident update from these facts only: checkout failed for 18 minutes from 14:07; service recovered at 14:25; the cause is still under investigation; Priya owns the investigation; the next update is due at 16:00. Audience: customer support leads who need to brief their teams. 80–110 words.
+
+Marker's note, not part of any task prompt: task 7 targets token counterpoints and metronome paragraphs. Task 8 targets the assistant-commentary frame. Tasks 9–11 target fidelity, unsupported detail and required terminology. Task 12 tests explicit overrides. Tasks 13–15 test operation, strength and restraint. Task 16 tests whether the reader can understand and act. Don't paste this note when running the tasks.
 
 ## Marking checklist
 
@@ -51,6 +60,11 @@ Score each piece pass/fail per row (rows scoped to specific tasks only apply the
 
 | Check | Fail examples |
 |---|---|
+| The requested operation is followed | audit mode returns a rewrite; tighten mode rebuilds the piece |
+| Editing strength is respected | task 13 receives a structural rewrite; strong mode makes only cosmetic changes to poor prose |
+| Good source prose is not changed for activity's sake | task 13 replaces natural wording without a clear reader benefit |
+| Creative choices survive operational defaults | task 15 removes the deliberate em dash, fragment or repetition |
+| The reader can identify the purpose and any supplied action, owner or deadline | task 16 buries Priya's ownership or the 16:00 update time |
 | Meaning and point of view are preserved in rewrites | promotional source becomes sceptical; a proposal becomes an approved plan |
 | No unsupported facts, capabilities, examples, anecdotes, causes, results, names or commitments | task 10 claims Northstar connects to Salesforce or saves five hours a week |
 | Uncertainty and evidentiary limits are preserved | task 9 changes "suggests" to "shows", drops "preliminary" or implies safety was tested |

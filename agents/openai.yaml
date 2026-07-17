@@ -1,8 +1,8 @@
 # Keep short_description aligned with the SKILL.md frontmatter description (source of truth).
 interface:
   display_name: "Writing Style"
-  short_description: "Direct Australian English without common AI tells"
-  default_prompt: "Use $writing-style to write or rewrite this in direct Australian English without changing its meaning."
+  short_description: "Draft, rewrite or audit direct Australian English"
+  default_prompt: "Use $writing-style to rewrite this in standard mode without changing its meaning."
 
 policy:
   allow_implicit_invocation: false

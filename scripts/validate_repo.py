@@ -87,7 +87,12 @@ def validate_openai_yaml(errors: list[str]) -> None:
 
 
 def validate_markdown_links(errors: list[str]) -> None:
-    markdown_files = [ROOT / "README.md", *sorted((ROOT / "eval").glob("*.md"))]
+    markdown_files = [
+        ROOT / "README.md",
+        SKILL,
+        *sorted((ROOT / "references").glob("*.md")),
+        *sorted((ROOT / "eval").glob("*.md")),
+    ]
     link_pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
     for markdown_file in markdown_files:
         text = markdown_file.read_text(encoding="utf-8")
@@ -105,14 +110,14 @@ def validate_synced_examples(errors: list[str]) -> None:
     skill_text = SKILL.read_text(encoding="utf-8")
     readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
     skill_match = re.search(
-        r"\*\*Bad \(AI-typical\):\*\*\n> (?P<before>.*?)\n\n"
-        r"\*\*Good:\*\*\n> (?P<after>.*?)\n",
+        r"\*\*Overwritten:\*\*\n> (?P<before>.*?)\n\n"
+        r"\*\*Standard rewrite:\*\*\n> (?P<after>.*?)\n",
         skill_text,
         re.DOTALL,
     )
     readme_match = re.search(
-        r"\*\*Before \(AI-typical\):\*\*\n\n> (?P<before>.*?)\n\n"
-        r"\*\*After:\*\*\n\n> (?P<after>.*?)\n",
+        r"\*\*Overwritten:\*\*\n\n> (?P<before>.*?)\n\n"
+        r"\*\*Standard rewrite:\*\*\n\n> (?P<after>.*?)\n",
         readme_text,
         re.DOTALL,
     )
@@ -126,14 +131,17 @@ def validate_synced_examples(errors: list[str]) -> None:
 def validate_evals(errors: list[str]) -> None:
     text = EVAL_PROMPTS.read_text(encoding="utf-8")
     task_numbers = [int(number) for number in re.findall(r"^(\d+)\. \*\*", text, re.MULTILINE)]
-    if task_numbers != list(range(1, 13)):
-        fail(errors, "eval tasks must be numbered consecutively from 1 to 12")
+    if task_numbers != list(range(1, 17)):
+        fail(errors, "eval tasks must be numbered consecutively from 1 to 16")
 
     required_checks = (
         "Meaning and point of view are preserved",
         "No unsupported facts",
         "Uncertainty and evidentiary limits are preserved",
         "Explicit user instructions override skill defaults",
+        "The requested operation is followed",
+        "Good source prose is not changed for activity's sake",
+        "Creative choices survive operational defaults",
     )
     for check in required_checks:
         if check not in text:
@@ -154,6 +162,17 @@ def validate_tracked_files(errors: list[str]) -> None:
         fail(errors, ".DS_Store must not be tracked")
 
 
+def validate_references(errors: list[str]) -> None:
+    required = {
+        "references/australian-english.md",
+        "references/anti-patterns.md",
+        "references/assistant-frame.md",
+    }
+    for relative_path in required:
+        if not (ROOT / relative_path).is_file():
+            fail(errors, f"missing required reference: {relative_path}")
+
+
 def main() -> int:
     errors: list[str] = []
     validate_skill(errors)
@@ -162,6 +181,7 @@ def main() -> int:
     validate_synced_examples(errors)
     validate_evals(errors)
     validate_tracked_files(errors)
+    validate_references(errors)
 
     if errors:
         for error in errors:
