@@ -1,5 +1,7 @@
 # Eval results: June 2026, third run (assistant-commentary-frame rule)
 
+**Evidence status:** Historical, non-reproducible rule-development run. The recorded with-skill passage was edited after generation, so it is not raw evidence and must not be used in current quality claims. The text remains here to preserve the repository's history.
+
 - **Date:** 23 June 2026
 - **Model:** Claude (Opus 4.8) via Claude Code workflow subagents, fresh context per arm
 - **Skill version:** assistant-commentary-frame branch (adds the "The assistant-commentary frame" section, self-check item 7, the README bullet and eval task 8 with its checklist row)

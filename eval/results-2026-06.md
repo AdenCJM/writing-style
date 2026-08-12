@@ -1,5 +1,7 @@
 # Eval results: June 2026
 
+**Evidence status:** Historical rule-development run. It predates the current single-workflow engine and fidelity rubric, uses one Claude-only sample per task and does not include auditable raw baseline outputs. Retain it as history, not evidence of current quality.
+
 - **Date:** 10 June 2026
 - **Model:** Claude (Fable 5) via Claude Code, fresh subagent context per run
 - **Skill version:** style-overhaul branch (post-review fixes)

@@ -1,5 +1,7 @@
 # Eval results: June 2026, second run (pacing and counterpoint rules)
 
+**Evidence status:** Historical rule-development run. It predates the current single-workflow engine and fidelity rubric, uses one sample per arm and was generated and marked by the same model in one session. Retain it as history, not evidence of current quality.
+
 - **Date:** 10 June 2026
 - **Model:** Claude (Fable 5) via Claude Code, fresh subagent context per run
 - **Skill version:** pacing-and-counterpoint-rules branch (adds the paragraph-pacing rule with its self-check item, the token-counterpoint ban with its checklist row, and amends the rhythm row)
