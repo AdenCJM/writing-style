@@ -24,7 +24,7 @@ Tasks 23–29 were added on 12 August 2026 to cover grammar-level tells, guardra
 
 2. **Email** (semi-formal). Assume today is Wednesday 10 June 2026. Ask an external partner (Sarah at a games studio) to reschedule the quarterly business review from Tuesday 16 June to Tuesday 23 June at the same time because two team members will be travelling. Professional but warm. Under 150 words.
 
-3. **LinkedIn post** (semi-formal). Share three lessons learned from deploying AI agents into production workflows at a blockchain gaming company over the past year. Use only these supplied lessons: narrow ticket-triage agents stayed in use while general-purpose agents were retired; customer-facing messages still require human review; each live agent has a named owner who reviews errors weekly. 150–200 words.
+3. **LinkedIn post** (semi-formal). Share three lessons learned from deploying AI agents into production workflows at a software company over the past year. Use only these supplied lessons: narrow ticket-triage agents stayed in use while general-purpose agents were retired; customer-facing messages still require human review; each live agent has a named owner who reviews errors weekly. 150–200 words.
 
 4. **One-pager intro** (formal). A one-line document title plus the opening two paragraphs of an internal proposal recommending an automated lead-enrichment pipeline. Audience is the exec team. The team currently spends about 6 hours a week manually enriching roughly 2,000 inbound leads a quarter. The proposed pipeline would pull company size and location from the team's existing data provider, write those fields to the CRM and flag incomplete records for review. Cost and implementation time are unknown. 100–150 words.
 

@@ -52,7 +52,7 @@ Aden
 
 ### Task 3: LinkedIn post
 
-We've spent the past year putting AI agents into production workflows at a blockchain gaming company. Some worked, some quietly got turned off. Three lessons that stuck:
+We've spent the past year putting AI agents into production workflows at a software company. Some worked, some quietly got turned off. Three lessons that stuck:
 
 1. **Boring workflows first.** The agents earning their keep are doing ticket triage and data entry. Nothing you'd put on a conference slide. Start where the work repeats and mistakes are cheap.
 

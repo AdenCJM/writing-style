@@ -70,7 +70,7 @@ Aden
 
 ### Task 3: LinkedIn post
 
-A year of putting AI agents into production workflows at a blockchain gaming company. Some earned their keep, others quietly died. Three lessons that stuck.
+A year of putting AI agents into production workflows at a software company. Some earned their keep, others quietly died. Three lessons that stuck.
 
 **1. Boring workflows first.** Our wins came from support ticket triage and lead enrichment, not the flashy ideas we pitched at the start. If a human finds the task tedious and repetitive, it's probably a good fit for an agent.
 
@@ -149,7 +149,7 @@ Aden
 
 ### Task 3: LinkedIn post
 
-A year of putting AI agents into production workflows at a blockchain gaming company. Three lessons that stuck.
+A year of putting AI agents into production workflows at a software company. Three lessons that stuck.
 
 1. Narrow beats clever. Our best agents do one boring thing well: summarising tickets, enriching leads, triaging alerts. Every time we built something ambitious and general, it got shelved. The boring ones run every day.
 
